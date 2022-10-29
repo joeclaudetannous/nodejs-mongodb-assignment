@@ -1,0 +1,962 @@
+{
+	"info": {
+		"_postman_id": "3db9bc41-397e-4732-a55c-d88777c974aa",
+		"name": "code challenge 2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24039018"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "signup user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test1password\",\r\n    \"name\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup user response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test1password\",\r\n    \"name\": \"test1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "212"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d4-gUG+hn0L1lWIgB3YIxn3lk4QkKA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 14:27:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user added successfully\",\n    \"user\": {\n        \"email\": \"test1@test.com\",\n        \"password\": \"$2a$12$5d.PCfJ3fVNS.sGpAOFoNeRbbArFn1JNSYxr8axqLyiXgsVdruBYK\",\n        \"name\": \"test1\",\n        \"notes\": [],\n        \"_id\": \"635a95583be2e3da507e0ffa\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test1password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login user response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test1password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e-w8E5uluNsnNcyqQs7WAaH4FR1e0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 14:31:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user logged in succesfully\",\n    \"user\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YTk1NTgzYmUyZTNkYTUwN2UwZmZhIiwiaWF0IjoxNjY2ODgxMTEyLCJleHAiOjE2NjY4ODQ3MTJ9.JPhn73dmFUbd_fTRywaXtCarzdUe76HE3uh8HkiIH78\",\n        \"_id\": \"635a95583be2e3da507e0ffa\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notes CRUD",
+			"item": [
+				{
+					"name": "create a note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YWViZTE4MmM3MjI3ZjhlMTI2MzM0IiwiaWF0IjoxNjY2OTY3OTc3LCJleHAiOjE2NjY5NzE1Nzd9.dTDJs0Nll54ten_Xh3oa4fe5hTyzljQMkxBQ-H0uRyo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test2\",\r\n    \"content\": \"test2 content2\",\r\n    \"tags\": [\"test2\"],\r\n    \"categoryId\": \"635ae7eddf2b3ed9d539951d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/note",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"note"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create a note",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test2\",\r\n    \"content\": \"test2 content2\",\r\n    \"tags\": [\"test2\"],\r\n    \"categoryId\": \"635ae7eddf2b3ed9d539951d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/note",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"note"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-1YOVbxCzThFlL3omRMMSH8Dp4F8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Oct 2022 14:57:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"note added successfully\",\n    \"note\": {\n        \"title\": \"test2\",\n        \"content\": \"test2 content2\",\n        \"tags\": [\n            \"test2\"\n        ],\n        \"categoryId\": \"635ae7eddf2b3ed9d539951d\",\n        \"creatorId\": \"635aebe182c7227f8e126334\",\n        \"_id\": \"635bedd9c2c2dc6f0496a562\",\n        \"createdAt\": \"2022-10-28T14:57:29.276Z\",\n        \"updatedAt\": \"2022-10-28T14:57:29.276Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update a note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YWViZTE4MmM3MjI3ZjhlMTI2MzM0IiwiaWF0IjoxNjY3MDMyMzg5LCJleHAiOjE2NjcwMzU5ODl9.vojs05GJ9ceQOrv1K_x-M90mOibN4suJ4uNnf_YaQBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test update\",\r\n    \"content\": \"test update\",\r\n    \"tags\": [\"test update\"],\r\n    \"categoryId\": \"635ae7eddf2b3ed9d539951d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/note/635bed9ac2c2dc6f0496a55a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"note",
+								"635bed9ac2c2dc6f0496a55a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update a note example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test update\",\r\n    \"content\": \"test update\",\r\n    \"tags\": [\"test update\"],\r\n    \"categoryId\": \"635ae7eddf2b3ed9d539951d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/note/635bed9ac2c2dc6f0496a55a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"note",
+										"635bed9ac2c2dc6f0496a55a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-Rsw+8tfZNcdZFdyNUqG7nJbHBfE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 08:38:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"note updated succesfully!\",\n    \"note\": {\n        \"_id\": \"635bed9ac2c2dc6f0496a55a\",\n        \"title\": \"test update\",\n        \"content\": \"test update\",\n        \"tags\": [\n            \"test update\"\n        ],\n        \"categoryId\": \"635ae7eddf2b3ed9d539951d\",\n        \"creatorId\": \"635aebe182c7227f8e126334\",\n        \"createdAt\": \"2022-10-28T14:56:26.786Z\",\n        \"updatedAt\": \"2022-10-29T08:38:04.889Z\",\n        \"__v\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get note by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YWViZTE4MmM3MjI3ZjhlMTI2MzM0IiwiaWF0IjoxNjY3MDQyNTEzLCJleHAiOjE2NjcwNDYxMTN9.WxD9X5oZs_ea4DXkwls3laQj0yIsWDpzH1wroUeRANk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/note/635bed9ac2c2dc6f0496a55a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"note",
+								"635bed9ac2c2dc6f0496a55a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete note by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/note/635bed9ac2c2dc6f0496a55a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"note",
+								"635bed9ac2c2dc6f0496a55a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD category",
+			"item": [
+				{
+					"name": "create a category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YWViZTE4MmM3MjI3ZjhlMTI2MzM0IiwiaWF0IjoxNjY2OTAzMDIyLCJleHAiOjE2NjY5MDY2MjJ9.gp-YLUIIT2AJn_2hh0Bb-OhxDzLEYozTo5oEO9pN9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"politic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create a category example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"sport\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-Cmec5OyOWIWrjxuHfcghog3KIWE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 19:43:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ressource created successfully\",\n    \"category\": {\n        \"name\": \"sport\",\n        \"notesCount\": 0,\n        \"userId\": \"635a95583be2e3da507e0ffa\",\n        \"_id\": \"635adf4fabdd40dab8d1b697\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get a category by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YTk1NTgzYmUyZTNkYTUwN2UwZmZhIiwiaWF0IjoxNjY2ODk5MDM4LCJleHAiOjE2NjY5MDI2Mzh9.izKVQTbTPm1Njdc56BBDSuEdlGRBQVQm0vrhu5WvT5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/category/635adf4fabdd40dab8d1b697",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"category",
+								"635adf4fabdd40dab8d1b697"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get a category by id example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/category/635adf4fabdd40dab8d1b697",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"category",
+										"635adf4fabdd40dab8d1b697"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a5-iDznX+JjHzGiocvGIgjtGZCLCaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 19:45:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ressource fetched successfully!\",\n    \"category\": {\n        \"_id\": \"635adf4fabdd40dab8d1b697\",\n        \"name\": \"sport\",\n        \"notesCount\": 0,\n        \"userId\": \"635a95583be2e3da507e0ffa\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updated a category field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YTk1NTgzYmUyZTNkYTUwN2UwZmZhIiwiaWF0IjoxNjY2ODk5MDM4LCJleHAiOjE2NjY5MDI2Mzh9.izKVQTbTPm1Njdc56BBDSuEdlGRBQVQm0vrhu5WvT5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"music\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/category/635adf4fabdd40dab8d1b697",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"category",
+								"635adf4fabdd40dab8d1b697"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updated a category field example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"music\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/category/635adf4fabdd40dab8d1b697",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"category",
+										"635adf4fabdd40dab8d1b697"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-PYL1nUQ5mpTbjOzEKmEcJuQbS3g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 19:55:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ressources updated succesfully\",\n    \"category\": {\n        \"_id\": \"635adf4fabdd40dab8d1b697\",\n        \"name\": \"music\",\n        \"notesCount\": 0,\n        \"userId\": \"635a95583be2e3da507e0ffa\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete a category by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwidXNlcklkIjoiNjM1YWViZTE4MmM3MjI3ZjhlMTI2MzM0IiwiaWF0IjoxNjY2OTAzMDIyLCJleHAiOjE2NjY5MDY2MjJ9.gp-YLUIIT2AJn_2hh0Bb-OhxDzLEYozTo5oEO9pN9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/category/635aec2582c7227f8e126337",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"category",
+								"635aec2582c7227f8e126337"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete a category by id example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/category/635adf4fabdd40dab8d1b697",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"category",
+										"635adf4fabdd40dab8d1b697"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origine",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PATCH, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-HLeyVijntOZLgq5iNQ/AWWZu5iY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 19:58:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ressource deleted successfully!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
